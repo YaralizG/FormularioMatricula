@@ -1,0 +1,50 @@
+﻿@model FormularioMatricula.Models.Estudiantes
+
+@{
+    ViewData["Title"] = "Matricula";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <form asp-controller="Estudiantes" asp-action="Registro">
+                <div class="mb-3">
+                    <label asp-for="apellido" class="form-label">Apellido</label>
+                    <input asp-for="apellido" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="nombre" class="form-label">Nombre</label>
+                    <input asp-for="nombre" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="fechanacimiento" class="form-label">Fecha Nacimiento</label>
+                    <input asp-for="fechanacimiento" type="text" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="dni" class="form-label">DNI</label>
+                    <input asp-for="dni" type="text" class="form-control">
+                </div>
+                  <div class="mb-3">
+                    <label asp-for="genero" class="form-label">Genero</label>
+                    <input asp-for="genero" type="text" class="form-control">
+                </div>
+                
+
+                <div class="mb-3">
+                        <label for="">Carrera:</label>
+                        <select name="carrera" id="" class="form-control">
+                            <option value="contabilidad">Contabilidad</option>
+                            <option value="administración">Administración</option>
+                            <option value="medicina">Medicina</option>
+                        </select>
+                    </div>
+
+
+
+
+                <button type="submit" class="btn btn-success">Vender</button>
+            </form>
+            <h1>@ViewData["Message"]</h1>
+        </div>
+    </div>
+</div>
