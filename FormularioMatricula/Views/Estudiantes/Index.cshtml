@@ -7,9 +7,9 @@
 <div class="container">
     <div class="row">
         <div class="col-4">
-            <form asp-controller="Estudiantes" asp-action="Registro">
+            <form asp-controller="Estudiantes" asp-action="Registrar">
                 <div class="mb-3">
-                    <label asp-for="apellido" class="form-label">Apellido</label>
+                    <label asp-for="apellido" class="form-label">Apellidos</label>
                     <input asp-for="apellido" type="text" class="form-control">
                 </div>
                 <div class="mb-3">
@@ -24,9 +24,14 @@
                     <label asp-for="dni" class="form-label">DNI</label>
                     <input asp-for="dni" type="text" class="form-control">
                 </div>
-                  <div class="mb-3">
-                    <label asp-for="genero" class="form-label">Genero</label>
-                    <input asp-for="genero" type="text" class="form-control">
+                 
+
+                <div class="mb-3">
+                        <label for="">Genero:</label>
+                        <select name="genero" id="" class="form-control">
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                        </select>
                 </div>
                 
 
@@ -36,13 +41,11 @@
                             <option value="contabilidad">Contabilidad</option>
                             <option value="administración">Administración</option>
                             <option value="medicina">Medicina</option>
+                            <option value="sistemas">Sistemas</option>
                         </select>
-                    </div>
+                </div>
 
-
-
-
-                <button type="submit" class="btn btn-success">Vender</button>
+                <button type="submit" class="btn btn-success">Registrar</button>
             </form>
             <h1>@ViewData["Message"]</h1>
         </div>
